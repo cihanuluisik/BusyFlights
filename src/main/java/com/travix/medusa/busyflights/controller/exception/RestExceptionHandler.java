@@ -1,4 +1,4 @@
-package com.travix.medusa.busyflights.controller.error;
+package com.travix.medusa.busyflights.controller.exception;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -13,11 +13,11 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 import java.util.List;
 
 @ControllerAdvice
-public class RestErrorHandler extends ResponseEntityExceptionHandler {
+public class RestExceptionHandler extends ResponseEntityExceptionHandler {
 
 
-    private ValidationError processFieldErrors(List<FieldError> fieldErrors) {
-        ValidationError validationError = new ValidationError();
+    private ValidationException processFieldErrors(List<FieldError> fieldErrors) {
+        ValidationException validationError = new ValidationException();
 
         for (FieldError fieldError: fieldErrors) {
             validationError.addFieldError(fieldError.getField(), fieldError.getDefaultMessage());

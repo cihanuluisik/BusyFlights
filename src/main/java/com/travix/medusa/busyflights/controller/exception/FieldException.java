@@ -1,12 +1,12 @@
-package com.travix.medusa.busyflights.controller.error;
+package com.travix.medusa.busyflights.controller.exception;
 
-public class FieldError {
+public class FieldException {
  
     private String field;
  
     private String message;
  
-    public FieldError(String field, String message) {
+    public FieldException(String field, String message) {
         this.field = field;
         this.message = message;
     }
