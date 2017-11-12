@@ -1,4 +1,4 @@
-package com.travix.medusa.busyflights.controller.exception;
+package com.travix.medusa.busyflights.exception;
 
 public class FieldException {
  
